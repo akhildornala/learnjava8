@@ -4,20 +4,20 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class StreamFilterExample {
+public class Stream03FilterExample {
     public static void main(String args[]) {
         List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
 
         System.out.println("#################### print even numbers");
         numbers.stream()
                 .filter(n -> n % 2 == 0)
-                .forEach(StreamFilterExample::printElement);
+                .forEach(Stream03FilterExample::printElement);
 
         System.out.println("#################### print odd numbers * 2");
         numbers.stream()
                 .filter(n -> n % 2 != 0)
                 .map(n -> n * 2)
-                .forEach(StreamFilterExample::printElement);
+                .forEach(Stream03FilterExample::printElement);
 
 
         System.out.println("#################### print odd numbers * 2 using function");
@@ -31,7 +31,7 @@ public class StreamFilterExample {
         numbers.stream()
                 .filter(n -> n % 2 != 0)
                 .map(n -> fun1.apply(n))
-                .forEach(StreamFilterExample::printElement);
+                .forEach(Stream03FilterExample::printElement);
 
         System.out.println("#################### print even numbers * numbers using lamda expression");
         Function<Integer, Integer> fun2 = a -> a * a;
@@ -39,7 +39,7 @@ public class StreamFilterExample {
         numbers.stream()
                 .filter(n -> n % 2 == 0)
                 .map(n -> fun2.apply(n))
-                .forEach(StreamFilterExample::printElement);
+                .forEach(Stream03FilterExample::printElement);
 
         System.out.println("#################### courses length");
         List<String> courses = List.of("Spring", "Spring Boot", "API", "Microservices", "AWS", "PCF", "Azure", "Docker", "Kubernetes");

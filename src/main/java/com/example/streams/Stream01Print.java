@@ -3,7 +3,7 @@ package com.example.streams;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class StreamPrint {
+public class Stream01Print {
     public static void main(String args[]) {
         List<String> ls = List.of("one", "two", "three", "four", "six", "seven", "eight");
         System.out.println("###############################enhanced for loop");
@@ -12,7 +12,7 @@ public class StreamPrint {
         }
 
         System.out.println("###############################stream input to other function");
-        ls.stream().forEach(StreamPrint::printElement);
+        ls.stream().forEach(Stream01Print::printElement);
 
         System.out.println("###############################stream input to System class");
         ls.stream().forEach(System.out::println);
