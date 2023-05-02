@@ -56,6 +56,11 @@ public class Stream04Reduce {
             }
         };
 
+        /*
+        BinaryOperator , input and output should be of same type
+         */
+//        BinaryOperator<Integer> biOP3 = (String num1, String num2) -> num1.length() + num2.length();
+
         BinaryOperator<Integer> biOP2 = (num1, num2) -> num1 + num2;
 
         BiFunction<Integer, Integer, Integer> biFunction = (num1, num2) -> num1 + num2;
