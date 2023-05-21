@@ -28,7 +28,9 @@ public class IplPlayer {
                 new IplPlayer(17, "ab de villiers", "rcb", 85),
                 new IplPlayer(53, "david warner", "srh", 100),
                 new IplPlayer(99, "surya kumar", "mi", 99),
-                new IplPlayer(50, "chris gayle", "punjab", 49)
+                new IplPlayer(50, "chris gayle", "punjab", 49),
+                new IplPlayer(1, "bhuvaneshwar", "srh", 25),
+                new IplPlayer(43, "sunil narine", "kkr", 50)
         );
     }
 
