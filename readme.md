@@ -15,3 +15,8 @@ diff between binaryoperator and function
 reference repo: https://github.com/in28minutes/functional-programming-with-java
 
 my repo: https://github.com/akhildornala/learnjava8`
+
+
+useful links
+https://deloittedevelopment.udemy.com/course/functional-programming-with-java/learn/lecture/16544514#questions
+

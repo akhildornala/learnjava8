@@ -10,6 +10,7 @@ public class Stream13IntBinaryOperator {
         IntBinaryOperator ib = (x, y) -> x + y;
         int sum = ib.applyAsInt(2, 3);
         System.out.println("sum:" + sum);
+        // advantage is no need to unbox
 
     }
 }
