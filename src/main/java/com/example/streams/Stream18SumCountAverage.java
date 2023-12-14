@@ -10,11 +10,15 @@ public class Stream18SumCountAverage {
         Predicate<IplPlayer> score50Players = x -> x.getHighScore() >= 50;
 
 
-//        iplPlayerList.stream()
-//                .map(x-> x.getHighScore())
-//                .sum
-
+        int sum = iplPlayerList.stream()
+                .mapToInt(x -> x.getHighScore())
+                .sum();
+        System.out.println(sum);
 
 
     }
+
+    /*
+    https://deloittedevelopment.udemy.com/course/functional-programming-with-java/learn/lecture/16544528#search
+     */
 }
