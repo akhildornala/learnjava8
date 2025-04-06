@@ -26,13 +26,13 @@ public class Counter extends Thread {
     public static void main(String[] args) {
         System.out.println(Thread.currentThread().getName() + " is executing..." );
         Counter counter = new Counter();
-        counter.start();
+//        counter.start();
 
         //5 threads
-//        for (int i = 0; i < 5; i++) {
-//            Thread t = new Thread(counter);
-//            t.start();
-//        }
+        for (int i = 0; i < 5; i++) {
+            Thread t = new Thread(counter);
+            t.start();
+        }
 
     }
 
