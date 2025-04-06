@@ -12,12 +12,16 @@ public class Employee {
     private String eDept;
     private List<String> skills;
 
+    public Employee() {
+    }
+
     public static List<Employee> getEmployeeDefaultData() {
         Employee emp1 = new Employee("Akhil", 1000.0, "Developer", 29, "IT", List.of("java", "springboot", "AWS", "kafka"));
         Employee emp2 = new Employee("Somesh", 900.0, "Developer", 29, "IT", List.of("javascript", "spring", "junit", "tesing"));
         Employee emp3 = new Employee("Hari", 1100.0, "Tester", 29, "Testing", List.of("medical", "phone", "money", "java"));
         return List.of(emp1, emp2, emp3);
     }
+
 
     public Employee(String eName, Double eSal, String role, int eAge, String eDept, List<String> skills) {
         super();
