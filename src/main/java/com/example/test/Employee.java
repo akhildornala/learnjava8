@@ -19,7 +19,8 @@ public class Employee {
         Employee emp1 = new Employee("Akhil", 1000.0, "Developer", 29, "IT", List.of("java", "springboot", "AWS", "kafka"));
         Employee emp2 = new Employee("Somesh", 900.0, "Developer", 29, "IT", List.of("javascript", "spring", "junit", "tesing"));
         Employee emp3 = new Employee("Hari", 1100.0, "Tester", 29, "Testing", List.of("medical", "phone", "money", "java"));
-        return List.of(emp1, emp2, emp3);
+        Employee emp4 = new Employee("Tara", 1000.0, "SQL", 25, "Testing", List.of("SQL", "salesforce", "database", ".net"));
+        return List.of(emp1, emp2, emp3, emp4);
     }
 
 
