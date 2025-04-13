@@ -21,5 +21,9 @@ public class Pet {
         this.petName = petName;
     }
 
+    public String test(String a) {
+        return "from pet " + a;
+    }
+
 
 }

@@ -21,5 +21,10 @@ public class Dog extends Pet {
         this.dogFood = dogFood;
     }
 
+    @Override
+    public String test(String a) {
+        return "from Dog " + a;
+    }
+
 
 }
