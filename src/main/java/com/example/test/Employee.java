@@ -20,7 +20,9 @@ public class Employee {
         Employee emp2 = new Employee("Somesh", 900.0, "Developer", 29, "IT", List.of("javascript", "spring", "junit", "tesing"));
         Employee emp3 = new Employee("Hari", 1100.0, "Tester", 29, "Testing", List.of("medical", "phone", "money", "java"));
         Employee emp4 = new Employee("Tara", 1000.0, "SQL", 25, "Testing", List.of("SQL", "salesforce", "database", ".net"));
-        return List.of(emp1, emp2, emp3, emp4);
+        Employee emp5 = new Employee("mahesh", 800.0, "Scrum Master", 35, "Product", List.of("Agile", "Scrum", "standup", "reports"));
+        Employee emp6 = new Employee("mahesh", 800.0, "Developer", 25, "Product", List.of("Agile", "Scrum", "standup", "reports"));
+        return List.of(emp1, emp2, emp3, emp4, emp5, emp6);
     }
 
 
