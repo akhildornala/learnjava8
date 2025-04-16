@@ -34,6 +34,14 @@ public class Top3SalaryList {
                 .collect(Collectors.groupingBy(Employee::geteName, LinkedHashMap::new, Collectors.toList()));
         System.out.println(employeeMap2);
 
+        Map<String, Map<String, String>> map3 = employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::geteName, LinkedHashMap::new, Collectors.toMap(Employee::geteName, Employee::getRole, (oldVal, newVal) -> newVal)));
+        System.out.println(map3);
+
+        Map<String, List<Employee>> map4 = employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::geteName));
+        System.out.println(map4);
+
 
     }
 }
