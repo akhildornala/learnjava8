@@ -1,22 +1,20 @@
 package com.example.test;
 
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class TreeMapExample {
 
     public static void main(String[] args) {
-        List<Employee> employeeList = Employee.getEmployeeDefaultData();
+        List<Employee> employeeList = new ArrayList<>(Employee.getEmployeeDefaultData());
 
 
         Map<String, Employee> treeMap = new TreeMap<>();
         treeMap = employeeList.stream()
-                .collect(Collectors.toMap(Employee::geteName, v->v, (v1,v2)->v1, TreeMap::new));
+                .collect(Collectors.toMap(Employee::geteName, v -> v, (v1, v2) -> v1, TreeMap::new));
         employeeList.stream()
-                        .collect(Collectors.groupingBy(Employee::geteName,TreeMap::new, Collectors.toList()));
+                .collect(Collectors.groupingBy(Employee::geteName, TreeMap::new, Collectors.toList()));
         treeMap.entrySet()
                 .stream()
                 .forEach(System.out::println);
@@ -44,6 +42,26 @@ public class TreeMapExample {
         System.out.println("custom");
         System.out.println(customTreeMap);
 
+        Comparator<Employee> comparator = new Comparator<Employee>() {
+            @Override
+            public int compare(Employee o1, Employee o2) {
+                return o1.geteName().compareTo(o2.geteName());
+            }
+        };
+
+        TreeMap<Employee, String> treeMap1 = new TreeMap<>(comparator);
+        treeMap1 = employeeList.stream()
+                .collect(Collectors.toMap(Function.identity(), Employee::geteName, (v1, v2) -> v1, TreeMap::new));
+        System.out.println("sorting");
+        System.out.println(treeMap1);
+        System.out.println("############################");
+        employeeList.sort(new EmployeeNameSorting());
+        System.out.println(employeeTreeMap);
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        employeeList.sort(new EmployeeAgeSorting());
+        System.out.println(employeeList);
+        System.out.println("end");
+
 
     }
 
@@ -51,8 +69,8 @@ public class TreeMapExample {
         return list.stream().collect(Collectors.toMap(keyMapper, v -> v, (v1, v2) -> v1, TreeMap::new));
     }
 
-    public static TreeMap<String,Employee> generateTreeMap(List<Employee> employeeList) {
-        TreeMap<String,Employee> treeMap =  employeeList.stream().collect(Collectors.toMap(Employee::geteName, v->v, (v1,v2)->v1, TreeMap::new));
+    public static TreeMap<String, Employee> generateTreeMap(List<Employee> employeeList) {
+        TreeMap<String, Employee> treeMap = employeeList.stream().collect(Collectors.toMap(Employee::geteName, v -> v, (v1, v2) -> v1, TreeMap::new));
         return treeMap;
     }
 }

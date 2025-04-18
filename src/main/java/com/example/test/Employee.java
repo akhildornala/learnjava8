@@ -1,9 +1,10 @@
 package com.example.test;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
 
     private String eName;
     private Double eSal;
@@ -22,7 +23,8 @@ public class Employee {
         Employee emp4 = new Employee("Tara", 1000.0, "SQL", 25, "Testing", List.of("SQL", "salesforce", "database", ".net"));
         Employee emp5 = new Employee("mahesh", 800.0, "Scrum Master", 35, "Product", List.of("Agile", "Scrum", "standup", "reports"));
         Employee emp6 = new Employee("mahesh", 800.0, "Developer", 25, "Product", List.of("Agile", "Scrum", "standup", "reports"));
-        return List.of(emp1, emp2, emp3, emp4, emp5, emp6);
+        Employee emp7 = new Employee("Aditya", 1200.0, "Manager", 25, "Manager", List.of("project", "Agile", "Scrum", "standup", "reports"));
+        return List.of(emp1, emp2, emp3, emp4, emp5, emp6, emp7);
     }
 
 
@@ -100,12 +102,18 @@ public class Employee {
     public void seteDept(String eDept) {
         this.eDept = eDept;
     }
+
     public List<String> getSkills() {
         return skills;
     }
 
     public void setSkills(List<String> skills) {
         this.skills = skills;
+    }
+
+    @Override
+    public int compareTo(final Employee e1) {
+        return this.geteName().compareTo(e1.geteName());
     }
 
 
