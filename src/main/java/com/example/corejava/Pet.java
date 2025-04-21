@@ -5,6 +5,11 @@ public class Pet {
     private String petName;
     private String petFood;
 
+    void eat() {
+        System.out.println("eat() method of base class");
+        System.out.println("Animal is eating.");
+    }
+
     public String getPetFood() {
         return petFood;
     }
