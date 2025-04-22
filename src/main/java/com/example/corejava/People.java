@@ -1,8 +1,9 @@
 package com.example.corejava;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class People {
+public class People implements Serializable {
 
     private int id;
     private String info;
