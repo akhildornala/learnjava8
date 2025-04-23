@@ -14,7 +14,7 @@ public class ExampleListToMap {
         System.out.println(employeeList);
         System.out.println("end of list");
         Map<String, Employee> employeeMap = employeeList.stream()
-                .collect(Collectors.toMap(Employee::geteName, Function.identity()));
+                .collect(Collectors.toMap(Employee::geteName, Function.identity(), (v1,v2)->v1));
         System.out.println(employeeMap);
     }
 }
