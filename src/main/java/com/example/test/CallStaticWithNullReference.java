@@ -11,5 +11,6 @@ public class CallStaticWithNullReference {
             System.out.println(emp.getEmployeeDefaultData());
 
             Collections.synchronizedMap(new HashMap<>());
+
         }
 }
