@@ -63,6 +63,7 @@ public class TreeMapExample {
         System.out.println("end");
 
 
+
     }
 
     public static <K, V> TreeMap<K, V> convertListToTreeMap(List<V> list, java.util.function.Function<V, K> keyMapper) {
@@ -71,6 +72,7 @@ public class TreeMapExample {
 
     public static TreeMap<String, Employee> generateTreeMap(List<Employee> employeeList) {
         TreeMap<String, Employee> treeMap = employeeList.stream().collect(Collectors.toMap(Employee::geteName, v -> v, (v1, v2) -> v1, TreeMap::new));
+        employeeList.stream().collect(Collectors.toMap(Employee::geteName, v->v, (v1,v2)->v1, LinkedHashMap::new));
         return treeMap;
     }
 }
