@@ -68,5 +68,6 @@ public class LoadBalancer {
         String ipAddress3 = loadBalancer.getNextServer();
         System.out.println("Request routed to server: " + ipAddress3);
         System.out.println(loadBalancer);
+
     }
 }
