@@ -12,5 +12,6 @@ public class CallStaticWithNullReference {
 
             Collections.synchronizedMap(new HashMap<>());
 
+
         }
 }
