@@ -17,6 +17,7 @@ public class Employee implements Comparable<Employee> {
     }
 
 
+
     public static List<Employee> getEmployeeDefaultData() {
         Employee emp1 = new Employee("Akhil", 1000.0, "Developer", 29, "IT", List.of("java", "springboot", "AWS", "kafka"));
         Employee emp2 = new Employee("Somesh", 900.0, "Developer", 29, "IT", List.of("javascript", "spring", "junit", "tesing"));
