@@ -13,6 +13,7 @@ public class Completable1 {
                 System.out.println("CompletableFuture is not finished yet...");
             }
 //            long result = completableFuture.get();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
