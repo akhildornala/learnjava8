@@ -19,6 +19,7 @@ public class Top10WithoutSorting {
         int[] arr = new int[10];
         arr[0] = ls.get(0);
 
+
         for(int i=0; i< ls.size(); i++){
 
 
