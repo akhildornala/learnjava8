@@ -14,7 +14,6 @@ public class CharacterCountInString {
                 .collect(Collectors.groupingBy(c->c, Collectors.counting()));
         System.out.println(map);
 
-
     }
 
 }
