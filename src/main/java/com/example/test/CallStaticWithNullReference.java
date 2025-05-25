@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 
 public class CallStaticWithNullReference {
+        
 
         public static void main(String args[]){
             System.out.println(Employee.getEmployeeDefaultData());
