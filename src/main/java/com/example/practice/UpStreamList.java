@@ -20,6 +20,7 @@ public class UpStreamList {
             res = res + callMe(nums.get(i), nums.get(i + 1), step, i+1, nums);
         }
         return res;
+        
     }
 
     private static int callMe(int firstNum, int secondNum, int step, int index, List<Integer> nums) {
