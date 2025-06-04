@@ -16,6 +16,7 @@ public class HCFExample3 {
                     factors.add(i);
                 }
             }
+            
             Comparator<Integer> comparator = (o1, o2) -> o2.compareTo(o1);
             factors.sort(comparator);
             numsFactorsMap.put(num, factors);
