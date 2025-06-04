@@ -16,6 +16,7 @@ public class CreateDailyNotesFolder {
             String yearString = todayAsString.substring(0, 4);
             String monthString = todayAsString.substring(0, 6);
             String dateString = todayAsString.substring(0, 8);
+            
 
             String yearPath = sourcePath + "/" + yearString;
             File yearFolder = new File(yearPath);
