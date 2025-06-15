@@ -12,7 +12,6 @@ public class Address {
 
     }
     
-
     public Address(String houseNumber, String area, String city) {
         this.houseNumber = houseNumber;
         this.area = area;
