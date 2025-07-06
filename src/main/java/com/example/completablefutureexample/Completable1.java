@@ -18,6 +18,7 @@ public class Completable1 {
             e.printStackTrace();
         }
 
+        
     }
 
     public static Long factorial(Integer number) {
